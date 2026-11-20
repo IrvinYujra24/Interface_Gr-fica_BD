@@ -1,0 +1,9 @@
+
+Nuevo EstudianteEstudiante [nombre=Jose, apellido=Gonzales, ci=156456155, carrera=Mecatrónica]
+Nuevo EstudianteEstudiante [nombre=Carlos, apellido=Mendez, ci=3432432, carrera=Sistemas]
+Nuevo EstudianteEstudiante [nombre=Jose, apellido=Perez, ci=321321, carrera=Sistemas]
+Nuevo EstudianteEstudiante [nombre=Luis, apellido=Ramos, ci=416156, carrera=Sistemas]
+Nuevo Estudiante
+Estudiante [nombre=, apellido=, ci=, carrera=]
+Nuevo Estudiante
+Estudiante [nombre=, apellido=, ci=, carrera=]
