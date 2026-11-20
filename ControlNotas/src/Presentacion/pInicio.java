@@ -91,6 +91,16 @@ public class pInicio extends JFrame {
 		});
 		btnMostrarE.setBounds(275, 48, 149, 23);
 		contentPane.add(btnMostrarE);
+		
+		JButton btnListaMateria = new JButton("Listar");
+		btnListaMateria.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				pListarMaterias ventana=new pListarMaterias();
+				ventana.setVisible(true);
+			}
+		});
+		btnListaMateria.setBounds(275, 119, 149, 23);
+		contentPane.add(btnListaMateria);
 
 	}
 }
