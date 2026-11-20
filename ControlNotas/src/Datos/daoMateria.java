@@ -97,11 +97,14 @@ public class daoMateria {
 			ResultSet resultado=ps.executeQuery();
 			
 			while(resultado.next()) {				
-				Materia mat=new Materia();				
+				Materia mat=new Materia();			
+				//Creamos el objeto materia
 				mat.setNombre(resultado.getString("nombre"));
 				mat.setCodigo(resultado.getString("codigo"));
 				mat.setCreditos(resultado.getInt("creditos"));
 				mat.setSemestre(resultado.getInt("semestre"));
+				
+				//Agregamos el objeto a la lista
 				lista.add(mat);
 			}
 			return lista;

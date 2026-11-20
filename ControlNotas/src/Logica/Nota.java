@@ -1,5 +1,12 @@
 package Logica;
 
+import java.util.List;
+
+import javax.swing.table.DefaultTableModel;
+
+import Datos.daoMateria;
+import Datos.daoNota;
+
 public class Nota {
 	private int parcial1;
 	private int parcial2;
@@ -69,5 +76,28 @@ public class Nota {
 				+ asignatura + "]";
 	}
 	
-	
+	public DefaultTableModel obtenerNota(String p){
+        String[] columnas = {"Parcial 1", "Parcial 2", "Parcial 3", "Examen Final", "Nota Final"};
+        daoNota mat =new daoNota();
+        DefaultTableModel modelo = new DefaultTableModel(null, columnas) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        List<Nota> notas = mat.obtenerNota(p);
+
+        for (Nota nota : notas) {
+        	Object[] fila = {
+        			nota.getParcial1(),
+        			nota.getParcial2(),
+        			nota.getParcial3(),
+        			nota.getExamenFinal(),
+        			nota.getNotaFinal(),
+        	};
+        	modelo.addRow(fila);
+
+        }
+        return modelo;
+    }
 }
